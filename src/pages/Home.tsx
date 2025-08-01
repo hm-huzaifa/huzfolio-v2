@@ -70,7 +70,7 @@ const Home = memo(() => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-2 flex justify-center lg:justify-end"
+              className="lg:col-span-2 flex justify-center lg:justify-end flex-col items-center"
             >
               <div className="relative">                
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-green-400 rounded-full blur-md opacity-70"></div>
@@ -84,6 +84,19 @@ const Home = memo(() => {
                   </div>
                 </div>
               </div>
+              
+              {/* Name and tagline below the image */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-6 text-center"
+              >
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
+                  Muhammad Huzaifa
+                </h2>
+                <p className="text-gray-300 mt-2">Software Engineer</p>
+              </motion.div>
             </motion.div>
           </div>
         </div>
